@@ -1,0 +1,52 @@
+#Opis CoronavirusAntiPlague
+##Zarządzanie transportem:
+Implementacja różnych środków transportu (np. linie lotnicze, pociągi, pojazdy samochodowe, cargo).
+Każdy transport ma własne kryteria wyłączania (np. liczba zarażonych).
+Wizualizacja ruchu transportu za pomocą animacji.
+##Ulepszenia:
+Gracz może kupować ulepszenia za punkty (np. szybkie leczenie, zamykanie granic).
+Ulepszenia muszą być możliwe do implementacji i wpływać na grę.
+##Sterowanie pandemią:
+Symulacja rozprzestrzeniania się wirusa między krajami.
+Rozprzestrzenianie się wirusa zależne od trudności gry.
+##Warunki zakończenia gry:
+Wygrana: Zatrzymanie rozprzestrzeniania wirusa.
+Przegrana: Wszystkie osoby zostają zarażone.
+##Interfejs graficzny (GUI):
+Menu główne:
+Nowa gra
+High Scores
+Exit
+Wizualizacja mapy z elementami interaktywnymi.
+Wyświetlanie punktacji w czasie rzeczywistym.
+Obsługa rankingów z wykorzystaniem JList i pasków przewijania.
+##Wątki:
+Licznik czasu gry i rozprzestrzenianie się wirusa muszą być obsługiwane w osobnych wątkach.
+Gra nie może blokować interakcji użytkownika z GUI.
+##Zapis wyników:
+Ranking ma być przechowywany w pliku z użyciem interfejsu Serializable.
+##Obsługa wyjątków:
+Wyświetlanie komunikatów dla użytkownika w przypadku błędów.
+
+##Technologie i narzędzia użyte w projekcie
+1. Język programowania
+Java: Główny język programowania użyty do implementacji logiki gry i interfejsu graficznego (GUI).
+2. Framework i biblioteki
+Swing:
+Tworzenie okien i komponentów interfejsu graficznego, takich jak:
+JFrame – główne okna aplikacji.
+JList – do wyświetlania listy wyników.
+JButton, JScrollPane – przyciski i paski przewijania.
+Obsługa interakcji użytkownika, np. przyciski i okna dialogowe.
+3. Wzorce projektowe
+MVC (Model-View-Controller):
+Model: Logika gry (np. zarządzanie transportem, infekcją, rankingiem).
+View: Interfejs użytkownika (GUI).
+Controller: Sterowanie interakcjami między modelem a widokiem.
+4. Zarządzanie wątkami
+Java Threads:
+Obsługa równoległego przetwarzania, np. licznika czasu gry oraz symulacji rozprzestrzeniania się wirusa.
+Użycie Runnable lub ExecutorService do zarządzania wątkami.
+5. Serializacja danych
+Interfejs Serializable:
+Zapis i odczyt danych do/z pliku, np. wyników graczy i rankingu.
